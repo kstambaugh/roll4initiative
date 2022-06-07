@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <h1>Roll 4 Initiative</h1>
+        <h2>Add New Player</h2>
+    </header>
+
+    <form action="indexjs.js">
+        <h3>Player/Character Names</h3>
+        <label for="playerName">Player Name</label>
+        <input type="text" id="playerName" name="playerName" value="">
+        <label for="characterName">Character Name</label>
+        <input type="text" id="characterName" name="characterName" value="">
+    </form>
+    <form action="indexjs.js">
+        <h3>Character Race</h3>
+        <label for="pcRace">Character Race</label>
+        <select name="pcRace" id="pcRace">
+            <option value="human">human</option>
+            <option value="elf">elf</option>
+            <option value="dwarf">dwarf</option>
+            <option value="dragonborn">dragonborn</option>
+        </select>
+        <label for="pcSubRace">Character Subrace</label>
+        <select name="pcSubRace" id="pcSubRace">
+            <option value="">*</option>
+            <option value="">*</option>
+            <option value="">*</option>
+        </select>
+    </form>
+    <form action="indexjs.js">
+        <h3>Character Class</h3>
+        <label for="playerClass">Choose Your Class</label>
+        <select name="playerClass" id="playerClass">
+            <option value="artificer">Artificer</option>
+            <option value="barbarian">Barbarian</option>
+            <option value="bard">Bard</option>
+            <option value="cleric">Cleric</option>
+            <option value="druid">Druid</option>
+            <option value="fighter">Fighter</option>
+            <option value="monk">Monk</option>
+            <option value="paladin">Paladin</option>
+            <option value="ranger">Ranger</option>
+            <option value="rogue">Rogue</option>
+            <option value="sorcerer">Sorcerer</option>
+            <option value="warlock">Warlock</option>
+            <option value="wizard">Wizard</option>
+        </select>
+    </form>
+    <form id="character-attributes" action="indexjs.js">
+        <h3>Character Attributes</h3>
+        <label for="strength">Strength</label>
+        <input type="number" name="strength" id="strength">
+        <label for="dexerity">Dexerity</label>
+        <input type="number" name="dexerity" id="dexerity">
+        <label for="constitution">Constitution</label>
+        <input type="number" name="constitution" id="constitution">
+        <label for="inteligence">Inteligence</label>
+        <input type="number" name="inteligence" id="inteligence">
+        <label for="wisdom">Wisdom</label>
+        <input type="number" name="wisdom" id="wisdom">
+        <label for="charisma">Charisma</label>
+        <input type="number" name="charisma" id="charisma">
+    </form>
+    <form id="character-background" action="indexjs.js">
+        <h3>Character Background</h3>
+        <label for="pcBackground">Choose Background</label>
+        <select name="pcBackground" id="pcBackground">
+            <option value="acolyte">Acolyte</option>
+            <option value="charlatan">Charlatan</option>
+            <option value="entertainer">Entertainer</option>
+            <option value="hermit">Hermit</option>
+            <option value="noble">Noble</option>
+            <option value="soldier">Soldier</option>
+        </select>
+    </form>
+
+
+    <script src="indexjs.js"></script>
+</body>
+
+</html>
