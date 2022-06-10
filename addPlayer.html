@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="left-split">
+        <button id="Modalbutton" name="addPlayer">Add New Player</button>
+        <div id="pcModal" class="modal">
+            <div class="modal-content">
+                <span id="modalClose" class="close">&times;</span>
+                <form>
+                    <div class="formBox">
+                        <label for="playerName">Player Name</label>
+                        <input type="text" id="playerName" name="playerName">
+                    </div>
+                    <div class="formBox">
+                        <label for="characterName">Character Name</label>
+                        <input type="text" id="characterName" name="characterName">
+                    </div>
+                    <div id="chooseClass" class="formBox">
+                        <label for="playerClass">Choose Your Class</label>
+                        <select name="playerClass" id="playerClass">
+                            <option value="artificer">Artificer</option>
+                            <option value="barbarian">Barbarian</option>
+                            <option value="bard">Bard</option>
+                            <option value="cleric">Cleric</option>
+                            <option value="druid">Druid</option>
+                            <option value="fighter">Fighter</option>
+                            <option value="monk">Monk</option>
+                            <option value="paladin">Paladin</option>
+                            <option value="ranger">Ranger</option>
+                            <option value="rogue">Rogue</option>
+                            <option value="sorcerer">Sorcerer</option>
+                            <option value="warlock">Warlock</option>
+                            <option value="wizard">Wizard</option>
+                        </select>
+                        <label for="subClass">Sub Class</label>
+                        <select name="subClass" id="subClass">
+                            <option value="1">Arcane Trickster</option>
+                        </select>
+                        <label for="classLevel">Class Level</label>
+                        <input type="number" name="classLevel" id="classLevel">
+                    </div>
+                    <!-- <div class="formBox">
+                        <label for="multiClass">MultiClass</label>
+                        <input type="checkbox" name="multiClass" id="multiClassCheck" value='True'>
+                    </div> -->
+                    <div id='attributeForm' class="formBox">
+                        <label for="strength">Strength</label>
+                        <input type="number" name="strength" id="strength">
+                        <label for="dexerity">Dexterity</label>
+                        <input type="number" name="dexerity" id="dexterity">
+                        <label for="constitution">Constitution</label>
+                        <input type="number" name="constitution" id="constitution">
+                        <label for="inteligence">Inteligence</label>
+                        <input type="number" name="inteligence" id="inteligence">
+                        <label for="wisdom">Wisdom</label>
+                        <input type="number" name="wisdom" id="wisdom">
+                        <label for="charisma">Charisma</label>
+                        <input type="number" name="charisma" id="charisma">
+                    </div>
+                    <div class="formBox">
+                        <button id="addButton">Click to Add</button>
+                    </div>
+                </form>
+
+            </div>
+
+        </div>
+        <div id="msg">
+            <pre></pre>
+
+        </div>
+    </div>
+    <div id="right-split">
+
+    </div>
+
+
+    <script src="indexjs.js"></script>
+</body>
+
+</html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -15,14 +15,14 @@
         <h2>Add New Player</h2>
     </header>
 
-    <form action="indexjs.js">
+    <form id="addPlayerForm" action="indexjs.js">
         <h3>Player/Character Names</h3>
         <label for="playerName">Player Name</label>
-        <input type="text" id="playerName" name="playerName" value="">
+        <input type="text" id="playerName" name="playerName" >
         <label for="characterName">Character Name</label>
-        <input type="text" id="characterName" name="characterName" value="">
-    </form>
-    <form action="indexjs.js">
+        <input type="text" id="characterName" name="characterName">
+
+
         <h3>Character Race</h3>
         <label for="pcRace">Character Race</label>
         <select name="pcRace" id="pcRace">
@@ -37,8 +37,7 @@
             <option value="">*</option>
             <option value="">*</option>
         </select>
-    </form>
-    <form action="indexjs.js">
+
         <h3>Character Class</h3>
         <label for="playerClass">Choose Your Class</label>
         <select name="playerClass" id="playerClass">
@@ -56,8 +55,7 @@
             <option value="warlock">Warlock</option>
             <option value="wizard">Wizard</option>
         </select>
-    </form>
-    <form id="character-attributes" action="indexjs.js">
+
         <h3>Character Attributes</h3>
         <label for="strength">Strength</label>
         <input type="number" name="strength" id="strength">
@@ -71,8 +69,7 @@
         <input type="number" name="wisdom" id="wisdom">
         <label for="charisma">Charisma</label>
         <input type="number" name="charisma" id="charisma">
-    </form>
-    <form id="character-background" action="indexjs.js">
+
         <h3>Character Background</h3>
         <label for="pcBackground">Choose Background</label>
         <select name="pcBackground" id="pcBackground">
@@ -83,10 +80,13 @@
             <option value="noble">Noble</option>
             <option value="soldier">Soldier</option>
         </select>
+        <input type="button" onclick="submitPlayer()" value="Submit form">
     </form>
+
+
 
 
     <script src="indexjs.js"></script>
 </body>
 
-</html>
+</html> -->
