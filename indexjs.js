@@ -1,6 +1,22 @@
 let log = console.log
 let table = console.table
 
+class PlayerCharacter {
+    constructor(playerName, characterName, pcClass, subclass, level, strength, dexterity, constitution, inteligence, wisdom, charisma) {
+        this.playerName = playerName;
+        this.characterName = characterName;
+        this.pcClass = pcClass;
+        this.subclass = subclass;
+        this.level = level;
+        this.stength = strength;
+        this.dexterity = dexterity;
+        this.constitution = constitution;
+        this.inteligence = inteligence;
+        this.wisdom = wisdom;
+        this.charisma = charisma;
+    }
+}
+
 // this code is for opening and closing the add player modal-------------------
 
 let pcModal = document.getElementById('pcModal');
@@ -23,52 +39,56 @@ window.onclick = function (event) {
 }
 
 
-//this code is for the user submitted information to be turned into an object ---------------------------------
+class myNewCharacter {
+    constructor(playerName, characterName) {
+        this.playerName = playerName;
+        this.characterName = characterName;
+    }
+}
 
-
-let myPlayerCharacter = [];
 
 const addNewPlayer = (event) => {
     event.preventDefault();
     let newPC = {
         playerName: document.getElementById('playerName').value,
         characterName: document.getElementById('characterName').value,
-        playerClass: document.getElementById('playerClass').value,
-        subClass: document.getElementById('subClass').value,
-        playerLevel: document.getElementById('classLevel').value,
-        strength: document.getElementById('strength').value,
-        dexterity: document.getElementById('dexterity').value,
-        consitution: document.getElementById('constitution').value,
-        inteligence: document.getElementById('inteligence').value,
-        wisdom: document.getElementById('wisdom').value,
-        charisma: document.getElementById('charisma').value
+        // playerClass: document.getElementById('playerClass').value,
+        // subClass: document.getElementById('subClass').value,
+        // playerLevel: document.getElementById('classLevel').value,
+        // strength: document.getElementById('strength').value,
+        // dexterity: document.getElementById('dexterity').value,
+        // consitution: document.getElementById('constitution').value,
+        // inteligence: document.getElementById('inteligence').value,
+        // wisdom: document.getElementById('wisdom').value,
+        // charisma: document.getElementById('charisma').value
     }
-    myPlayerCharacter.push(newPC);
+
+    getKeyValues(newPC)
+
     document.forms[0].reset();
     pcModal.style.display = 'none';
-
-
-    console.warn('add', { myPlayerCharacter });
-    let pre = document.querySelector('#msg pre');
-    pre.textContent = '\n' + JSON.stringify(myPlayerCharacter, '\t', 2)
-
-
+    console.warn('add', newPC);
 }
-class PlayerCharacter {
-    constructor(playerName, characterName, pcClass, subclass, level, strength, dexterity, constitution, inteligence, wisdom, charisma) {
-        this.playerName = playerName;
-        this.characterName = characterName;
-        this.pcClass = pcClass;
-        this.subclass = subclass;
-        this.level = level;
-        this.stength = strength;
-        this.dexterity = dexterity;
-        this.constitution = constitution;
-        this.inteligence = inteligence;
-        this.wisdom = wisdom;
-        this.charisma = charisma;
+
+const getKeyValues = (input) => {
+    for (let [key, value] of Object.entries(input)) {
+        return value
     }
 }
+
+
+
+const newStatBlock = (input, myID) => {
+    const statDiv = document.createElement('article');
+    statDiv.setAttribute('id', myID)
+    const statContent = document.createTextNode(input);
+    statDiv.appendChild(statContent);
+    const currentDiv = document.getElementById('statBlocks');
+    document.getElementById('statBlocks').appendChild(statDiv, currentDiv)
+}
+
+
+
 
 
 // let newPlayer = new PlayerCharacter('Kyle', 'Damien', 5, 'human', 'variant', 'rogue', 'arcane trickster', 10, 16, 12, 10, 10, 14)

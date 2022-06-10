@@ -11,8 +11,16 @@ body {
 
 #left-split {
     border: 1px solid black;
-    width: 25%;
+    width: 40%;
     height: 100vh;
+}
+
+article {
+    border: 1px solid black;
+    background-color: #aaa;
+    min-height: 100px;
+    overflow-wrap: break-word;
+
 }
 
 .modal {
@@ -53,6 +61,6 @@ body {
 
 #right-split {
     border: 1px solid black;
-    width: 75%;
+    width: 60%;
     height: 100vh;
 }
