@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="playerCard.css">
     <title>Document</title>
 </head>
 
@@ -69,6 +70,44 @@
             </div>
         </div>
         <div id="statBlocks">
+            <article class="playerCards">
+
+                <div id="statDiv1">
+                    <p id="name-pc"><span>Damien Rand </span> level <span id="current-level">1</span><br>
+                        <span id="chosenSubClass">Arcane Trickster</span> <span id="chosenClass">Rogue</span>
+                    </p>
+                    <div id="fastStat">
+                        <label for="initBonus">Initiative Bonus</label><input type="number"><br>
+                        <label for="armorClass">AC</label><input type="number">
+                        <label for="maxHP">HP</label><input type="number">
+                    </div>
+                    <div class='dropdown' id="passives">
+                        <label for="passive-pc"><span>Passive Stats</span></label>
+                        <div id="dropdown-content">
+                            <div id="selected-passives">
+                                <p><input type="checkbox" name="passivePerception" id="passivePerception">
+                                    <label class="passSelect" for="passivePerception">Perception</label>
+                                </p>
+                                <p><input type="checkbox" name="passiveInvestigation" id="passiveInvestigation">
+                                    <label class="passSelect" for="passiveInvestigation">Investigation</label>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div id="statusEffects">
+                    <label for="pcStatus">Status Effects</label>
+                    <label for="pcBuffs">Buffs</label>
+                    <select name="pcBuffs" id="pcBuffs"></select>
+                    <label for="pcDebuffs">DeBuffs</label>
+                    <select name="pcDebuffs" id="pcBuffs"></select>
+                    <div id="activeStatusEffects">
+
+                    </div>
+                </div>
+
+            </article>
 
 
         </div>
@@ -79,6 +118,7 @@
 
 
     <script src="indexjs.js"></script>
+    <script src="playerCard.js"></script>
 </body>
 
 </html>

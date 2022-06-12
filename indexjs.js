@@ -67,14 +67,18 @@ const addNewPlayer = (event) => {
 
     document.forms[0].reset();
     pcModal.style.display = 'none';
-    console.warn('add', newPC);
+    // console.warn('add', newPC);
 }
 
+// const convertPCInfo = (input) => {
+
+// }
+
 const getKeyValues = (input) => {
-    for (let [key, value] of Object.entries(input)) {
-        return value
-    }
+    let [key, value] = Object.entries(input)
+    log(value)
 }
+
 
 
 
